@@ -3,7 +3,7 @@ import samsungLogo from "../assets/samsunglogo.svg";
 
 export default function Navbar() {
   return (
-    <nav className="bg-transparent   top-0 left-0 w-full z-50 absolute text-white">
+    <nav className="bg-transparent   top-0 left-0 w-full z-50 absolute text-white p-9">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         
           <svg class="icon" focusable="false" aria-hidden="true" width="130" height="29" viewBox="0 0 130 29" fill="white">
@@ -21,10 +21,19 @@ export default function Navbar() {
 </ul>
 
         <div className="flex items-center space-x-4">
-          <input  type="search "placeholder="  search   " className="rounded-4xl p-1 text-center  " />
-          <FaSearch className="w-5 h-5 cursor-pointer" />
+
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="pl-10 pr-4 py-1.5 rounded-full text-white focus:outline-dotted focus:outline-2 focus:outline-black  border-white border-2 "
+            />
+            <FaSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white cursor-pointer" />
+          </div>
+
           <FaShoppingCart className="w-5 h-5 cursor-pointer" />
           <FaUser className="w-5 h-5 cursor-pointer" />
+          
         </div>
       </div>
     </nav>
