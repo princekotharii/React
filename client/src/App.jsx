@@ -1,13 +1,16 @@
 import React from "react";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Header";
 import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
+import AppRoutes from "./Routes/Routes";
 
 function App() {
   return (
     <div>
       <Navbar />
-        <Home />
+      <AppRoutes />
+      
+        
       <Footer />
     </div>
   );

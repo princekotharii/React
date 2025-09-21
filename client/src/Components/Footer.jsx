@@ -4,19 +4,19 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 function Footer() {
   return (
     <footer className="bg-gray-100 text-gray-700 px-6 py-10 mt-auto">
-      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 text-center md:text-left">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 text-center md:text-left border-t border-b">
         
         {/* Shop */}
         <div>
           <h3 className="font-semibold mb-3">Shop</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="#" className="hover:underline transition-colors">Shop Home</a></li>
+            <li><a href="#" className="hover:underline transition-colors">Buy Direct Get More</a></li>
             <li><a href="#" className="hover:underline transition-colors">SmartThings</a></li>
+            <li><a href="#" className="hover:underline transition-colors">Live Shop</a></li>
             <li><a href="#" className="hover:underline transition-colors">Samsung Care+</a></li>
-            <li><a href="#" className="hover:underline transition-colors">Explore</a></li>
-            <li><a href="#" className="hover:underline transition-colors">Explore</a></li>
-            <li><a href="#" className="hover:underline transition-colors">Explore</a></li>
-            <li><a href="#" className="hover:underline transition-colors">Explore</a></li>
+            <li><a href="#" className="hover:underline transition-colors">Discover AI</a></li>
+            <li><a href="#" className="hover:underline transition-colors">Explo</a></li>
             <li><a href="#" className="hover:underline transition-colors">Explore</a></li>
             <li><a href="#" className="hover:underline transition-colors">Explore</a></li>
             <li><a href="#" className="hover:underline transition-colors">Explore</a></li>
