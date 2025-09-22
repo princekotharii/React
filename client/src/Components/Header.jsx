@@ -30,11 +30,7 @@ export default function Navbar() {
               <NavLink
                 to="/shop"
                 className={({ isActive }) =>
-                  isActive ? "underline underline-offset-8" : "hover:text-gray-600"
-                }
-              >
-                Shop
-              </NavLink>
+                  isActive ? "underline underline-offset-8" : "hover:text-gray-600"}>Shop</NavLink>
             </li>
             
             <li><NavLink to="#" className="hover:text-gray-600">Mobile</NavLink></li>
