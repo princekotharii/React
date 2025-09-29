@@ -3,18 +3,44 @@ import Hero from "../Components/Hero";
 import Galaxy from "../assets/samsung2.webp";
 import ProductCard from "../Components/ProductCard";
 
+
 function Home() {
   return (
     <>
     <div>
-      <Hero />
-      <div className="relative cursor-pointer">
-            <img className="h-full w-full" src={Galaxy} alt="" />
+      <Hero />   {/* hero image  */}
+      
+      {/* 2nd img */}
+      <div className="relative cursor-pointer ">
+            <img className=" hidden sm:block w-full" src={Galaxy} alt="" />
+            <img className="sm:hidden" src="https://images.samsung.com/is/image/samsung/assets/in/home/09-2025/Galaxy-S25-FE-Ecosystem_Home_Feature_KV_mo_720x1120.jpg?$720_N_JPG$" alt="" />
             </div>
     </div>
 
-    <ProductCard name="tata" details="byebye" price={45}/>
-    <ProductCard name="kuchbhi" details="abhinav"/>
+    <div className="flex  p-[1.6666667vw_0vw] gap-[1.6666666vw] ">
+        <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/mx_2507/Galaxy-Z-Flip7_Home_Feature_Card_560x560.jpg?$560_560_JPG$" />
+        <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/mx_2507/HOME_Feature-Card_Watch8-Classic_560x560.jpg?$560_560_JPG$" />
+        <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/mx_2507/HOME_Feature-Card_Watch8_560x560.jpg?$560_560_JPG$" />
+        <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/home/250911/TabS10_Lite_featured_cards_560x560.jpg?$560_560_JPG$" />
+      </div>
+
+      <div className=" cursor-pointer">
+        <img className="hidden sm:block" src="https://images.samsung.com/is/image/samsung/assets/in/home/250717/VD-KV-PC_1440x810.png?$1440_N_PNG$" alt="" />
+        <img className="sm:hidden" src="https://images.samsung.com/is/image/samsung/assets/in/home/250717/VD-KV-MO_720x1120.png?$720_N_PNG$" alt="" />
+      </div>
+
+      <div className="flex p-[1.6666667vw_0vw] gap-[1.6666666vw] max-w-[1440px] h-[810] ml-60 ">
+        <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/mx_2507/Galaxy-Z-Flip7_Home_Feature_Card_560x560.jpg?$560_560_JPG$" />
+        <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/mx_2507/HOME_Feature-Card_Watch8-Classic_560x560.jpg?$560_560_JPG$" />
+        <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/mx_2507/HOME_Feature-Card_Watch8_560x560.jpg?$560_560_JPG$" />
+        <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/home/250911/TabS10_Lite_featured_cards_560x560.jpg?$560_560_JPG$" />
+      </div>
+
+
+
+
+
+ 
 </>
 
   );
