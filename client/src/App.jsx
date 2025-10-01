@@ -6,7 +6,7 @@ import AppRoutes from "./Routes/Routes";
 
 function App() {
   return (
-    <div className='overflow-x-hidden flex flex-col max-xl2:w-[1440px]'>
+    <div className={`overflow-x-hidden fleflex flex-col max-xl2:w-[1440px]`}>
       <Navbar />
       <AppRoutes />
       <Footer />

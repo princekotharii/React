@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HiMiniBars3 } from "react-icons/hi2";
-import { Link,NavLink, useLocation } from 'react-router-dom'
+import { FiSearch, FiUser, FiShoppingCart, FiTrendingUp } from "react-icons/fi";
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { IoClose } from "react-icons/io5";
 
 function Header() {
     const location = useLocation();
     const isNavPage = location.pathname === '/';
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
-        <nav className={`mx-1 z-10 h-[7.3655vw] flex gap-[2.22222222vw] items-center w-full absolute top-0 p-[2.2222vw_1.1111vw_0vw_1.1111vw] ${isNavPage ? "bg-transparent text-white" : "bg-white text-black"}`}>
-            <div className='cursor-pointer'>
+        <header className="w-full absolute top-0 z-20">
+            {/* Bar */}
+            <div className={`hidden md:flex justify-end text-sm px-[2vw] py-[0.5vw] 
+                ${isNavPage ? "bg-transparent text-white" : "bg-white text-black"}`}>
+                <NavLink to="/support" className="mr-[1.5vw]">Support</NavLink>
+                <NavLink to="/business" className="flex items-center gap-1">
+                    For Business <FiTrendingUp />
+                </NavLink>
+            </div>
+
+            {/*  Nav */}
+            <nav className={`flex items-center justify-between px-[2vw] py-[1vw] 
+                ${isNavPage ? "bg-transparent text-white" : "bg-white text-black shadow"}`}>
+
+                {/* Logo */}
                 <Link to={'/'}>
                 <svg className='' class="icon" focusable="false" aria-hidden="true" width="130" fill='currentColor' height="29" viewBox="0 0 130 29" data-di-res-id="7242691b-1854f892" data-di-rand="1758191581070">
                     <g transform="translate(-250 -7)">
@@ -15,53 +32,81 @@ function Header() {
                     </g>
                 </svg>
                 </Link>
+
+                {/* Desktop Nav */}
+                <ul className="hidden xl:flex gap-[2vw] font-medium">
+                    <li><NavLink to='/shop'>Shop</NavLink></li>
+                    <li><NavLink to='/mobile'>Mobile</NavLink></li>
+                    <li><NavLink to='/tv&av'>TV & AV</NavLink></li>
+                    <li><NavLink to='/appliances'>Appliances</NavLink></li>
+                    <li><NavLink to='/computing&displays'>Computing & Displays</NavLink></li>
+                    <li><NavLink to='/accessories'>Accessories</NavLink></li>
+                </ul>
+
+                {/* Icons */}
+                <div className="flex items-center gap-[1vw]">
+            <div className="relative">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="pl-10 pr-4 py-1.5 rounded-full text-white focus:outline-dotted focus:outline-2 focus:outline-black  border-white border-2 "
+            />
+            <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white cursor-pointer" />
+          </div>
+                    <button className="p-2 text-xl"><FiShoppingCart /></button>
+                    <button className="p-2 text-xl"><FiUser /></button>
+
+                    {/* Mobile Menu Button */}
+                    <div className="xl:hidden text-2xl">
+                        <button onClick={() => setMenuOpen(true)}>
+                            <HiMiniBars3 />
+                        </button>
+                    </div>
+                </div>
+            </nav>
+
+            {/* Mobile Side Menu */}
+            <div className={`fixed top-0 right-0 h-full w-[70vw] bg-white shadow-lg z-30 
+                transform ${menuOpen ? "translate-x-0" : "translate-x-full"} 
+                transition-transform duration-300 ease-in-out`}>
+
+                {/* Close Button */}
+                <div className="p-4">
+                    <div className="flex items-center gap-2">
+                        <input
+                            type="text"
+                            placeholder="Search..."
+                            className="flex-1 px-4 py-2 border rounded-full shadow-md"
+                        />
+                        <button
+                            onClick={() => setMenuOpen(false)}
+                            className="text-2xl"
+                        >
+                            ✕
+                        </button>
+                    </div>
+                </div>
+
+                {/* Menu Links */}
+                <ul className="flex flex-col gap-4 p-4 font-medium">
+                    <li><NavLink to='/shop' onClick={() => setMenuOpen(false)}>Shop</NavLink></li>
+                    <li><NavLink to='/mobile' onClick={() => setMenuOpen(false)}>Mobile</NavLink></li>
+                    <li><NavLink to='/tv&av' onClick={() => setMenuOpen(false)}>TV & AV</NavLink></li>
+                    <li><NavLink to='/appliances' onClick={() => setMenuOpen(false)}>Appliances</NavLink></li>
+                    <li><NavLink to='/computing&displays' onClick={() => setMenuOpen(false)}>Computing & Displays</NavLink></li>
+                    <li><NavLink to='/accessories' onClick={() => setMenuOpen(false)}>Accessories</NavLink></li>
+                </ul>
             </div>
 
-            <div className='h-full items-center flex justify-end w-full xl:justify-between'>
-                <div className='h-full items-center hidden xl:flex flex-1'>
-                    <ul className='list-none flex'>
-                        <li className='list-item '>
-                            <div className=''>
-                                <NavLink className='p-[.83333vw_.83333vw_1.1111vw_.83333vw] ' to='/shop'>Shop</NavLink>
-                            </div>
-                        </li>
-                        <li className='h-[4,822vw list-item] '>
-                            <div className=''>
-                                <NavLink className='p-[.83333vw_.83333vw_1.1111vw_.83333vw] ' to='/mobile'>Mobile</NavLink>
-                            </div>
-                        </li>
-                        <li className='h-[4,822vw list-item] '>
-                            <div className=''>
-                                <NavLink className='p-[.83333vw_.83333vw_1.1111vw_.83333vw] ' to='av&tv'>AV & TV</NavLink>
-                            </div>
-                        </li>
-                        <li className='h-[4,822vw list-item] '>
-                            <div className=''>
-                                <NavLink className='p-[.83333vw_.83333vw_1.1111vw_.83333vw] ' to='appliances'>Appliances</NavLink>
-                            </div>
-                        </li>
-                        <li className='h-[4,822vw list-item] '>
-                            <div className=''>
-                                <NavLink className='p-[.83333vw_.83333vw_1.1111vw_.83333vw] ' to='computing&displays'>Computing & Displays</NavLink>
-                            </div>
-                        </li>
-                        <li className='h-[4,822vw list-item] '>
-                            <div className=''>
-                                <NavLink className='p-[.83333vw_.83333vw_1.1111vw_.83333vw] ' to='accessories'>Accessories</NavLink>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div className=' xl:hidden'>
-                    <HiMiniBars3 />
-                </div>
-
-                <div className='flex '>
-                    <input type='search' placeholder='Search' className='w-[12.22222222vw] p-[0.69444444vw_0.83333333vw] border hidden rounded-4xl mr-[1.1111vw] xl:block'></input>
-                </div>
-            </div>
-        </nav>
-    )
+            {/* Background Overlay */}
+            {menuOpen && (
+                <div
+                    onClick={() => setMenuOpen(false)}
+                    className="fixed inset-0 bg-gray-500/10  z-0"
+                />
+            )}
+        </header>
+    );
 }
 
-export default Header
+export default Header;
