@@ -41,10 +41,13 @@ function Header() {
                     <li><NavLink to='/appliances'>Appliances</NavLink></li>
                     <li><NavLink to='/computing&displays'>Computing & Displays</NavLink></li>
                     <li><NavLink to='/accessories'>Accessories</NavLink></li>
+                    <li><NavLink to='/Weather'>Weather</NavLink></li>
                 </ul>
 
                 {/* Icons */}
                 <div className="flex items-center gap-[1vw]">
+
+                    {/* Search bar */}
             <div className="relative">
             <input
               type="text"
@@ -56,7 +59,7 @@ function Header() {
                     <button className="p-2 text-xl"><FiShoppingCart /></button>
                     <button className="p-2 text-xl"><FiUser /></button>
 
-                    {/* Mobile Menu Button */}
+                    {/* Mobile Menu Section*/}
                     <div className="xl:hidden text-2xl">
                         <button onClick={() => setMenuOpen(true)}>
                             <HiMiniBars3 />

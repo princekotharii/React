@@ -2,13 +2,16 @@ import React from "react";
 import Hero from "../Components/Hero";
 import Galaxy from "../assets/samsung2.webp";
 import ProductCard from "../Components/ProductCard";
+import Buynow from "../Components/Buynow";
 
 
 function Home() {
   return (
     <>
+    <Hero />   {/* hero image  */}
+    <div className={`mx-auto max-w-[1440px] w-full`}>
     <div>
-      <Hero />   {/* hero image  */}
+      
       
       {/* 2nd img */}
       <div className="relative cursor-pointer ">
@@ -36,11 +39,16 @@ function Home() {
         <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/home/250911/TabS10_Lite_featured_cards_560x560.jpg?$560_560_JPG$" />
       </div>
 
+      <div className="relative">
+        
+        <img className="w-full h-full" src="https://images.samsung.com/is/image/samsung/assets/in/home/250829/Washer_Dryer_KV_PC_1440x810_withoutText.jpg?$1440_N_JPG$" alt="" />
+        <div className="flex items-center justify-center space-x-4 absolute z-10 right-[20%] top-[25%] sm:top-[60%] sm:left-[15%] "><Buynow name="Buy" /></div>
+        
+      
+        
+      </div>
+      </div>
 
-
-
-
- 
 </>
 
   );
