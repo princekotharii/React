@@ -52,7 +52,7 @@ function Header() {
             <input
               type="text"
               placeholder="Search..."
-              className="pl-10 pr-4 py-1.5 rounded-full text-white focus:outline-dotted focus:outline-2 focus:outline-black  border-white border-2 "
+              className="hidden xl:block pl-10 pr-4 py-1.5 rounded-full text-white focus:outline-dotted focus:outline-2 focus:outline-black  border-white border-2 "
             />
             <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white cursor-pointer" />
           </div>
@@ -69,7 +69,7 @@ function Header() {
             </nav>
 
             {/* Mobile Side Menu */}
-            <div className={`fixed top-0 right-0 h-full w-[70vw] bg-white shadow-lg z-30 
+            <div className={`fixed top-0 right-0 h-full w-full sm:w-[70vw] bg-white shadow-lg z-30 
                 transform ${menuOpen ? "translate-x-0" : "translate-x-full"} 
                 transition-transform duration-300 ease-in-out`}>
 

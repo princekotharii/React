@@ -5,11 +5,12 @@ import ProductCard from "../Components/ProductCard";
 import Buynow from "../Components/Buynow";
 
 
+
 function Home() {
   return (
     <>
     <Hero />   {/* hero image  */}
-    <div className={`mx-auto max-w-[1440px] w-full`}>
+    <div className={`mx-auto max-w-[1440px] w-full mt-5`}>
     <div>
       
       
@@ -32,7 +33,7 @@ function Home() {
         <img className="sm:hidden" src="https://images.samsung.com/is/image/samsung/assets/in/home/250717/VD-KV-MO_720x1120.png?$720_N_PNG$" alt="" />
       </div>
 
-      <div className="flex p-[1.6666667vw_0vw] gap-[1.6666666vw] max-w-[1440px] h-[810] ml-60 ">
+      <div className="flex p-[1.6666667vw_0vw] gap-[1.6666666vw] max-w-[1440px] h-[810]  ">
         <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/mx_2507/Galaxy-Z-Flip7_Home_Feature_Card_560x560.jpg?$560_560_JPG$" />
         <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/mx_2507/HOME_Feature-Card_Watch8-Classic_560x560.jpg?$560_560_JPG$" />
         <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/mx_2507/HOME_Feature-Card_Watch8_560x560.jpg?$560_560_JPG$" />
@@ -49,6 +50,7 @@ function Home() {
       </div>
       </div>
 
+   
 </>
 
   );
