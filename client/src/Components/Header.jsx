@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { HiMiniBars3 } from "react-icons/hi2";
 import { FiSearch, FiUser, FiShoppingCart, FiTrendingUp } from "react-icons/fi";
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { IoClose } from "react-icons/io5";
 
 function Header() {
+    const navigate = useNavigate();
     const location = useLocation();
     const isNavPage = location.pathname === '/';
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="w-full absolute top-0 z-20">
+        <header className={`w-full top-0 ${isNavPage ? 'z-20 absolute' : ''}`}>
             {/* Bar */}
             <div className={`hidden md:flex justify-end text-sm px-[2vw] py-[0.5vw] 
                 ${isNavPage ? "bg-transparent text-white" : "bg-white text-black"}`}>
@@ -41,7 +42,6 @@ function Header() {
                     <li><NavLink to='/appliances'>Appliances</NavLink></li>
                     <li><NavLink to='/computing&displays'>Computing & Displays</NavLink></li>
                     <li><NavLink to='/accessories'>Accessories</NavLink></li>
-                    <li><NavLink to='/Weather'>Weather</NavLink></li>
                 </ul>
 
                 {/* Icons */}
@@ -57,7 +57,7 @@ function Header() {
             <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white cursor-pointer" />
           </div>
                     <button className="p-2 text-xl"><FiShoppingCart /></button>
-                    <button className="p-2 text-xl"><FiUser /></button>
+                    <button className="p-2 text-xl" onClick={()=>navigate('/login')}><FiUser /></button>
 
                     {/* Mobile Menu Section*/}
                     <div className="xl:hidden text-2xl">
