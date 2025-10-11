@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import { HiMiniBars3 } from "react-icons/hi2";
 import { FiSearch, FiUser, FiShoppingCart, FiTrendingUp } from "react-icons/fi";
-import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { IoClose } from "react-icons/io5";
 
 function Header() {
-    const navigate = useNavigate();
     const location = useLocation();
     const isNavPage = location.pathname === '/';
     const [menuOpen, setMenuOpen] = useState(false);
-    const [isHover, setIsHover]= useState(false)
+
     return (
-        <header className={`w-full top-0 ${isNavPage ? isHover ? "bg-white text-black z-10 absolute" : "bg-transparent text-white z-10 absolute" : "bg-white text-black shadow"}`}>
+        <header className="w-full absolute top-0 z-20">
             {/* Bar */}
             <div className={`hidden md:flex justify-end text-sm px-[2vw] py-[0.5vw] 
-                `}>
+                ${isNavPage ? "bg-transparent text-white" : "bg-white text-black"}`}>
                 <NavLink to="/support" className="mr-[1.5vw]">Support</NavLink>
                 <NavLink to="/business" className="flex items-center gap-1">
                     For Business <FiTrendingUp />
@@ -23,7 +22,7 @@ function Header() {
 
             {/*  Nav */}
             <nav className={`flex items-center justify-between px-[2vw] py-[1vw] 
-                `}>
+                ${isNavPage ? "bg-transparent text-white" : "bg-white text-black shadow"}`}>
 
                 {/* Logo */}
                 <Link to={'/'}>
@@ -35,7 +34,7 @@ function Header() {
                 </Link>
 
                 {/* Desktop Nav */}
-                <ul className="hidden xl:flex gap-[2vw] font-medium" onMouseEnter={()=>setIsHover(true)} onMouseLeave={()=>setIsHover(false)}>
+                <ul className="hidden xl:flex gap-[2vw] font-medium">
                     <li><NavLink to='/shop'>Shop</NavLink></li>
                     <li><NavLink to='/mobile'>Mobile</NavLink></li>
                     <li><NavLink to='/tv&av'>TV & AV</NavLink></li>
@@ -52,12 +51,12 @@ function Header() {
             <input
               type="text"
               placeholder="Search..."
-              className="hidden xl:block pl-10 pr-4 py-1.5 rounded-full text-white focus:outline-dotted focus:outline-2 focus:outline-black  border-white border-2 "
+              className="pl-10 pr-4 py-1.5 rounded-full text-white focus:outline-dotted focus:outline-2 focus:outline-black  border-white border-2 "
             />
             <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white cursor-pointer" />
           </div>
                     <button className="p-2 text-xl"><FiShoppingCart /></button>
-                    <button className="p-2 text-xl" onClick={()=>navigate('/login')}><FiUser /></button>
+                    <button className="p-2 text-xl"><FiUser /></button>
 
                     {/* Mobile Menu Section*/}
                     <div className="xl:hidden text-2xl">
@@ -69,7 +68,7 @@ function Header() {
             </nav>
 
             {/* Mobile Side Menu */}
-            <div className={`fixed top-0 right-0 h-full w-full sm:w-[70vw] bg-white shadow-lg z-30 
+            <div className={`fixed top-0 right-0 h-full w-[70vw] bg-white shadow-lg z-30 
                 transform ${menuOpen ? "translate-x-0" : "translate-x-full"} 
                 transition-transform duration-300 ease-in-out`}>
 
