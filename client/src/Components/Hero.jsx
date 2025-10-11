@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import heroImg from "../assets/heroimage.jpg";
 import Learnmore from "./Learnmore";
 import Buynow from "./Buynow";
 
@@ -27,7 +26,7 @@ function Hero() {
     <div className="relative cursor-pointer flex justify-center overflow-hidden">
       {/* Desktop Image */}
       <img
-        src={heroImg}
+        src='https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/25_bf_hero-kv_preview_pc_1920x1080_text_.jpg?$1920_N_JPG$?imwidth=1366'
         alt="hero"
         className="hidden sm:block transition-all duration-300 ease-out"
         style={{

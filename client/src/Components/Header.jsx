@@ -9,12 +9,12 @@ function Header() {
     const location = useLocation();
     const isNavPage = location.pathname === '/';
     const [menuOpen, setMenuOpen] = useState(false);
-
+    const [isHover, setIsHover]= useState(false)
     return (
-        <header className={`w-full top-0 ${isNavPage ? 'z-20 absolute' : ''}`}>
+        <header className={`w-full top-0 ${isNavPage ? isHover ? "bg-white text-black z-10 absolute" : "bg-transparent text-white z-10 absolute" : "bg-white text-black shadow"}`}>
             {/* Bar */}
             <div className={`hidden md:flex justify-end text-sm px-[2vw] py-[0.5vw] 
-                ${isNavPage ? "bg-transparent text-white" : "bg-white text-black"}`}>
+                `}>
                 <NavLink to="/support" className="mr-[1.5vw]">Support</NavLink>
                 <NavLink to="/business" className="flex items-center gap-1">
                     For Business <FiTrendingUp />
@@ -23,7 +23,7 @@ function Header() {
 
             {/*  Nav */}
             <nav className={`flex items-center justify-between px-[2vw] py-[1vw] 
-                ${isNavPage ? "bg-transparent text-white" : "bg-white text-black shadow"}`}>
+                `}>
 
                 {/* Logo */}
                 <Link to={'/'}>
@@ -35,7 +35,7 @@ function Header() {
                 </Link>
 
                 {/* Desktop Nav */}
-                <ul className="hidden xl:flex gap-[2vw] font-medium">
+                <ul className="hidden xl:flex gap-[2vw] font-medium" onMouseEnter={()=>setIsHover(true)} onMouseLeave={()=>setIsHover(false)}>
                     <li><NavLink to='/shop'>Shop</NavLink></li>
                     <li><NavLink to='/mobile'>Mobile</NavLink></li>
                     <li><NavLink to='/tv&av'>TV & AV</NavLink></li>
