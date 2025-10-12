@@ -6,6 +6,7 @@ import Weather from "../Pages/Weather";
 import Loginform from "../Pages/Loginform";
 import Login from "../Pages/Login";
 import Cart from "../Pages/Cart";
+import Mobile from "../Pages/Mobile";
 
 const AppRoutes = () => {
   return (
@@ -13,9 +14,10 @@ const AppRoutes = () => {
       <Route path="/shop" element={<Shop />} />
       <Route path="/" element={<Home />} />
       <Route path="/weather" element={<Weather />} />
-      <Route path="/login" element={<Login />}/>
-      <Route path="/loginform" element={<Loginform/>}/>
-      <Route parth="/cart" element={<Cart/>}/>
+      <Route path="/login" element={<Login />} />
+      <Route path="/loginform" element={<Loginform/>} />
+      <Route parth="/cart" element={<Cart />} />
+      <Route parth='/mobile' element={<Mobile />} />
     </Routes>
   );
 };

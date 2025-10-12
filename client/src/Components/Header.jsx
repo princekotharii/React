@@ -18,7 +18,7 @@ function Header() {
     const [scrolled, setScrolled] = useState(false); // 👈 detect scroll position
 
   // Handle scroll behavior
-    useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
     const currentY = window.scrollY;
 

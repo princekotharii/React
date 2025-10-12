@@ -2,7 +2,11 @@ import React from 'react'
 
 function Cart() {
   return (
-    <div>Cart</div>
+    <>
+    <div>helo</div>
+    <div>helo</div>
+    <div>helo</div>
+    </>
   )
 }
 

@@ -9,7 +9,7 @@ function LoginHeader() {
     const {user} = useContext(UserContext);
 
     return (
-        <div className="mx-1 h-[64px] xl:h-[5.55555556vw] flex gap-[2.22222222vw] items-center w-full top-0  bg-white text-black p-[0_1.11111111vw]">
+        <div className="mx-1 h-[64px] xl:h-[80px] flex gap-[2.22222222vw] items-center w-full top-0  bg-white text-black p-[0_1.11111111vw]">
             <div className="cursor-pointer w-[120px] mr-[4.44444444vw] h-full items-center flex">
                 <Link to={"/"} className="w-[120px] h-auto">
                     <img

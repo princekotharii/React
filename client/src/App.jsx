@@ -10,10 +10,11 @@ import LoginHeader from "./Components/LoginHeader";
 function App() {
   const location = useLocation()
   const isLogin = location.pathname === '/login'
+  const isCart = location.pathname === '/cart'
   return (
   <UserProvider>
     <div className={`overflow-x-hidden overflow-hidden  flex-col  `}>
-      {isLogin ? <LoginHeader /> : <Navbar />}
+      {isLogin || isCart ? <LoginHeader /> : <Navbar />}
       <AppRoutes />
       <Footer />
     </div>
