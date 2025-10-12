@@ -1,30 +1,26 @@
-import React, { useState } from 'react';
-import { HiMiniBars3 } from "react-icons/hi2";
-import { FiSearch, FiUser, FiShoppingCart, FiTrendingUp } from "react-icons/fi";
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import { IoClose } from "react-icons/io5";
+import React,{useContext, useState} from 'react';
+import { Link,Navigate,NavLink, useLocation, useNavigate } from 'react-router-dom'
+import MobileBar from './MobileBar';
+import { FaRegUser } from "react-icons/fa6";
+import { GoSearch } from "react-icons/go";
+import { BsCart2 } from "react-icons/bs";
+import {FiTrendingUp} from "react-icons/fi"
+import UserContext from '../contexts/UserContext';
 
 function Header() {
+
+    const {user} = useContext(UserContext)
+    const navigate = useNavigate()
     const location = useLocation();
     const isNavPage = location.pathname === '/';
-    const [menuOpen, setMenuOpen] = useState(false);
-
+    const [isListHovered, setIsListHovered] = useState(false);
     return (
-        <header className="w-full absolute top-0 z-20">
-            {/* Bar */}
-            <div className={`hidden md:flex justify-end text-sm px-[2vw] py-[0.5vw] 
-                ${isNavPage ? "bg-transparent text-white" : "bg-white text-black"}`}>
-                <NavLink to="/support" className="mr-[1.5vw]">Support</NavLink>
-                <NavLink to="/business" className="flex items-center gap-1">
-                    For Business <FiTrendingUp />
-                </NavLink>
-            </div>
-
-            {/*  Nav */}
-            <nav className={`flex items-center justify-between px-[2vw] py-[1vw] 
-                ${isNavPage ? "bg-transparent text-white" : "bg-white text-black shadow"}`}>
-
-                {/* Logo */}
+        <nav className={` mx-1 h-[64px] xl:h-[7.3655vw] flex gap-[2.22222222vw] items-center w-full top-0 p-[0_8px_0_8px] xl:p-[2.2222vw_1.1111vw_0vw_1.1111vw] ${isNavPage ? isListHovered ?'bg-white text-black z-10 absolute':'bg-transparent text-white z-10 absolute':'bg-white text-black'}`}>
+             {/* Bar */}
+            <div className={`hidden xl:flex justify-end  z-10 absolute right-[50%] top-[.69444444vw] -mr-[49.02777778vw] font-bold leading-[1.33] gsp-[.13888889vw] text-[14px]`}>
+                <NavLink to="" className="p-[4px_10px] ">Support</NavLink>
+                <NavLink to="" className="p-[4px_10px] flex items-center gap-1">For Business <FiTrendingUp /></NavLink></div>
+            <div className='cursor-pointer'>
                 <Link to={'/'}>
                 <svg className='' class="icon" focusable="false" aria-hidden="true" width="130" fill='currentColor' height="29" viewBox="0 0 130 29" data-di-res-id="7242691b-1854f892" data-di-rand="1758191581070">
                     <g transform="translate(-250 -7)">
@@ -32,83 +28,75 @@ function Header() {
                     </g>
                 </svg>
                 </Link>
-
-                {/* Desktop Nav */}
-                <ul className="hidden xl:flex gap-[2vw] font-medium">
-                    <li><NavLink to='/shop'>Shop</NavLink></li>
-                    <li><NavLink to='/mobile'>Mobile</NavLink></li>
-                    <li><NavLink to='/tv&av'>TV & AV</NavLink></li>
-                    <li><NavLink to='/appliances'>Appliances</NavLink></li>
-                    <li><NavLink to='/computing&displays'>Computing & Displays</NavLink></li>
-                    <li><NavLink to='/accessories'>Accessories</NavLink></li>
-                </ul>
-
-                {/* Icons */}
-                <div className="flex items-center gap-[1vw]">
-
-                    {/* Search bar */}
-            <div className="relative">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="pl-10 pr-4 py-1.5 rounded-full text-white focus:outline-dotted focus:outline-2 focus:outline-black  border-white border-2 "
-            />
-            <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white cursor-pointer" />
-          </div>
-                    <button className="p-2 text-xl"><FiShoppingCart /></button>
-                    <button className="p-2 text-xl"><FiUser /></button>
-
-                    {/* Mobile Menu Section*/}
-                    <div className="xl:hidden text-2xl">
-                        <button onClick={() => setMenuOpen(true)}>
-                            <HiMiniBars3 />
-                        </button>
-                    </div>
-                </div>
-            </nav>
-
-            {/* Mobile Side Menu */}
-            <div className={`fixed top-0 right-0 h-full w-[70vw] bg-white shadow-lg z-30 
-                transform ${menuOpen ? "translate-x-0" : "translate-x-full"} 
-                transition-transform duration-300 ease-in-out`}>
-
-                {/* Close Button */}
-                <div className="p-4">
-                    <div className="flex items-center gap-2">
-                        <input
-                            type="text"
-                            placeholder="Search..."
-                            className="flex-1 px-4 py-2 border rounded-full shadow-md"
-                        />
-                        <button
-                            onClick={() => setMenuOpen(false)}
-                            className="text-2xl"
-                        >
-                            ✕
-                        </button>
-                    </div>
-                </div>
-
-                {/* Menu Links */}
-                <ul className="flex flex-col gap-4 p-4 font-medium">
-                    <li><NavLink to='/shop' onClick={() => setMenuOpen(false)}>Shop</NavLink></li>
-                    <li><NavLink to='/mobile' onClick={() => setMenuOpen(false)}>Mobile</NavLink></li>
-                    <li><NavLink to='/tv&av' onClick={() => setMenuOpen(false)}>TV & AV</NavLink></li>
-                    <li><NavLink to='/appliances' onClick={() => setMenuOpen(false)}>Appliances</NavLink></li>
-                    <li><NavLink to='/computing&displays' onClick={() => setMenuOpen(false)}>Computing & Displays</NavLink></li>
-                    <li><NavLink to='/accessories' onClick={() => setMenuOpen(false)}>Accessories</NavLink></li>
-                </ul>
             </div>
 
-            {/* Background Overlay */}
-            {menuOpen && (
-                <div
-                    onClick={() => setMenuOpen(false)}
-                    className="fixed inset-0 bg-gray-500/10  z-0"
-                />
-            )}
-        </header>
-    );
+            <div className='h-full items-center flex justify-end w-full xl:justify-between relative'>
+                <div className='h-full items-center hidden xl:flex flex-1'>
+                    <ul className='list-none flex text-[17px] font-bold gap-6' onMouseEnter={()=> setIsListHovered(true)} onMouseLeave={() => setIsListHovered(false)}>
+                        <li className='list-item '>
+                            <div className=''>
+                                <NavLink className='p-[12px_12_16px] ' to='/shop'>Shop</NavLink>
+                            </div>
+                        </li>
+                        <li className='h-[4,822vw list-item] '>
+                            <div className=''>
+                                <NavLink className='p-[12px_12_16px] ' to='/mobile'>Mobile</NavLink>
+                            </div>
+                        </li>
+                        <li className='h-[4,822vw list-item] '>
+                            <div className=''>
+                                <NavLink className='p-[12px_12_16px] ' to='av&tv'>AV & TV</NavLink>
+                            </div>
+                        </li>
+                        <li className='h-[4,822vw list-item] '>
+                            <div className=''>
+                                <NavLink className='p-[12px_12_16px] ' to='appliances'>Appliances</NavLink>
+                            </div>
+                        </li>
+                        <li className='h-[4,822vw list-item] '>
+                            <div className=''>
+                                <NavLink className='p-[12px_12_16px] ' to='computing&displays'>Computing & Displays</NavLink>
+                            </div>
+                        </li>
+                        <li className='h-[4,822vw list-item] '>
+                            <div className=''>
+                                <NavLink className='p-[12px_12_16px] ' to='accessories'>Accessories</NavLink>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+               
+                
+                {/* Search Bar */}
+                <button type='button' className={`flex items-center xl:border xl:border-[rgba(255,255,255,0.2)] p-[9px] xl:p-[10px_12px] xl:mr-[.69444444vw] gap-[.55555556vw] xl:w-[176px] xl:rounded-[6.94444444vw] ${isNavPage ? isListHovered ? "bg-[#f7f7f7] text-black" : "xl:bg-[rgba(255,255,255,0.1)] text-white" : "bg-[#f7f7f7] text-black"} cursor-pointer relative justify-start`}>
+                    <span className='hidden xl:block order-2 absolute!important '>Search</span>
+                    <GoSearch className='w-[24px]  h-[24px] '/>
+                </button>
+                
+                {/* Cart */}
+                <Link className='p-[8px] xl:p-[.625vw]'>
+                    <BsCart2 className='h-[24px]  w-[24px]'/>
+                </Link>
+
+                {/* User */}
+                <button onClick={()=> navigate('./login')} className='group p-[9px] xl:p-[9px] text-0 items-center cursor-pointer'>
+                    <FaRegUser className='h-[24px] w-[24px]'/>
+
+                    <div className='z-10 bg-white text-black absolute hidden xl:group-hover:flex right-[.44444445vw] shadow-[0_4px_10px_0_rgba(0,0,0,.2)] mt-[15px] p-[24px] rounded-[1.38888889vw] w-[18.33333333vw] flex-col text-start'>
+                        <Link className='font-bold p-[.69444444vw_1.11111111vw_.83333333vw_1.11111111vw] text-[.97222222vw] leading-[1.33]'>{user || "Login"}</Link>
+                        <Link className='mb-[.625vw] p-[.69444444vw_1.11111111vw_.83333333vw_1.11111111vw] text-[.97222222vw] flex items-center relative justify-between leading-[1.33]'>Why Create a Samsung Account?</Link>
+                        <Link className='p-[.69444444vw_1.11111111vw_.83333333vw_1.11111111vw] text-[.97222222vw] leading-[1.33]'>Order</Link>
+                        <Link className='p-[.69444444vw_1.11111111vw_.83333333vw_1.11111111vw] text-[.97222222vw] leading-[1.33]'>Product Registrarion</Link>
+                        <Link className='p-[.69444444vw_1.11111111vw_.83333333vw_1.11111111vw] text-[.97222222vw] leading-[1.33]'>Digital Service Center</Link>
+                    </div>
+                </button>
+
+                {/* Mobile Bar */}
+                <MobileBar />
+                
+            </div>
+        </nav>
+    )
 }
 
-export default Header;
+export default Header
