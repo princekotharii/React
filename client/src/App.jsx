@@ -12,7 +12,7 @@ function App() {
   const isLogin = location.pathname === '/login'
   return (
   <UserProvider>
-    <div className={`overflow-x-hidden overflow-hidden fleflex flex-col `}>
+    <div className={`overflow-x-hidden overflow-hidden  flex-col  `}>
       {isLogin ? <LoginHeader /> : <Navbar />}
       <AppRoutes />
       <Footer />
