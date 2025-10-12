@@ -16,13 +16,8 @@ function Hero() {
         src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/25_bf-hero_kv_mo_720x1120.jpg?$720_N_JPG$?imwidth=720"
         alt="mobile hero"
       />
-
-      {/* Buttons */}
-      {/* <div className="flex items-center justify-center space-x-4 absolute z-10 left-[40%] top-[25%] sm:top-[60%] sm:left-[15%]">
-        <Learnmore />
-        <Buynow name="Buy" />
-      </div> */}
-      <div className=" absolute  top-[50%] w-[720px] pt-[52px] pb-[60px] transition-all mt-[53px] text-white left-[50%] ml-[-720px] pl-[60px] translate-y-[-50%] leading-1.15">
+        {/* Hero Images buttons */}
+      <div className=" absolute  top-[50%] w-[720px] pt-[52px] pb-[60px] transition-all mt-[53px] text-white left-[51%] ml-[-720px] pl-[60px] translate-y-[-50%] leading-1.15">
             <h1 className="text-[60px] font-bold leading-1.2 ">
               <span className="block ">Fab Grab Fest</span>
               <span className="hidden">Fab Grab Fest</span>

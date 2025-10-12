@@ -2,9 +2,10 @@ import React from "react";
 import { Routes, Route } from "react-router-dom"; 
 import Shop from "../Pages/Shop";
 import Home from "../Pages/Home";
-import Weather from "../Components/weather";
-import Loginform from "../Components/Loginform";
-import Login from "../Components/Login";
+import Weather from "../Pages/Weather";
+import Loginform from "../Pages/Loginform";
+import Login from "../Pages/Login";
+import Cart from "../Pages/Cart";
 
 const AppRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const AppRoutes = () => {
       <Route path="/weather" element={<Weather />} />
       <Route path="/login" element={<Login />}/>
       <Route path="/loginform" element={<Loginform/>}/>
+      <Route parth="/cart" element={<Cart/>}/>
     </Routes>
   );
 };
