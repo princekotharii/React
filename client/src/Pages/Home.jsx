@@ -16,7 +16,7 @@ function Home() {
       {/* 2nd img */}
       <div className="relative cursor-pointer ">
             <img className=" hidden sm:block w-full" src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/FGF_MX_1440X810-PC_2.jpg?$1440_N_JPG$" alt="" />
-            <img className="sm:hidden" src="https://images.samsung.com/is/image/samsung/assets/in/home/09-2025/Galaxy-S25-FE-Ecosystem_Home_Feature_KV_mo_720x1120.jpg?$720_N_JPG$" alt="" />
+            <img className="sm:hidden" src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/FGF_MX_720X1120-MO_2.jpg?$720_N_JPG$" alt="" />
             </div>
     </div>
 
@@ -29,7 +29,7 @@ function Home() {
 
       <div className=" cursor-pointer">
         <img className="hidden sm:block" src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/FGF_VD_1440X810_PC_.jpg?$1440_N_JPG$" alt="" />
-        <img className="sm:hidden" src="https://images.samsung.com/is/image/samsung/assets/in/home/250717/VD-KV-MO_720x1120.png?$720_N_PNG$" alt="" />
+        <img className="sm:hidden" src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/FGF_VD_720X1120_MO_.jpg?$720_N_JPG$" alt="" />
       </div>
 
       <div className="flex p-[1.6666667vw_0vw] gap-[1.6666666vw] max-w-[1440px] h-[810]  ">
@@ -41,7 +41,8 @@ function Home() {
 
       <div className="relative">
         
-        <img className="w-full h-full" src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/FGF_DA_1440X810-PC.jpg?$1440_N_JPG$" alt="" />
+        <img className="w-full h-full sm:block hidden" src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/FGF_DA_1440X810-PC.jpg?$1440_N_JPG$" alt="" />
+        <img className="sm:hidden block" src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/FGF_DA_720X1120-MO.jpg?$720_N_JPG$" alt="" />
         <div className="flex items-center justify-center space-x-4 absolute z-10 right-[20%] top-[25%] sm:top-[60%] sm:left-[15%] "><Buynow name="Buy" /></div>
         
       
