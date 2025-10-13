@@ -28,7 +28,7 @@ function Home() {
 
       {/* Product Card 1st */}
 
-          <div className="flex  gap-[1.6666666vw] overflow-x-auto scroll-smooth px-4 sm:px-0 max-w-full">
+          <div className="flex  gap-[1.6666666vw] overflow-x-auto scroll-smooth p-[1.66666667vw_0vw_1.66666667vw_0vw] sm:px-0 max-w-full scrollbar-hide ">
                 <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/ux3/home/MDVD_Feature_Card1_560X560.jpg?$560_560_JPG$"
                 title={"Neo QLED 8K"} />
                 <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/ux3/home/MDVD_Feature_Card2_560X560.jpg?$560_560_JPG$"
@@ -61,7 +61,7 @@ function Home() {
    
       
       {/* Product Card 2nd */}
-      <div className="flex  gap-[1.6666666vw] overflow-x-auto scroll-smooth px-4 sm:px-0 max-w-full">
+      <div className="flex  gap-[1.6666666vw] overflow-x-auto scroll-smooth p-[1.66666667vw_0vw_1.66666667vw_0vw] sm:px-0 max-w-full scrollbar-hide ">
         <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/mx_2507/Galaxy-Z-Flip7_Home_Feature_Card_560x560.jpg?$560_560_JPG$" title={"Galaxy Z Flip7"} />
         <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/mx_2507/HOME_Feature-Card_Watch8-Classic_560x560.jpg?$560_560_JPG$" title={"Galaxy Watch8 Classic"}/>
         <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/mx_2507/HOME_Feature-Card_Watch8_560x560.jpg?$560_560_JPG$" 
@@ -83,7 +83,7 @@ function Home() {
               </div>
       </div>
        {/* Product Card 3rd */}
-            <div className="flex  gap-[1.6666666vw] overflow-x-auto scroll-smooth px-4 sm:px-0 max-w-full">
+            <div className="flex  gap-[1.6666666vw] overflow-x-auto scroll-smooth p-[1.66666667vw_0vw_1.66666667vw_0vw] sm:px-0 max-w-full scrollbar-hide ">
             <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/home/250807/1.png?$560_560_PNG$" 
             title={"Bespoke AI Refrigerator"} />
             <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/ux3/home/MDDA_Feature_Card2_560X560.jpg?$560_560_JPG$" 
