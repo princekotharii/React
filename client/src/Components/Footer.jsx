@@ -10,7 +10,7 @@ function Footer() {
   const [open, setOpen] = useState(null)
 
   return (
-    <div className='sm:text-[.83333333vw] mt-10'>
+    <div className='sm:text-[.83333333vw] mt-2'>
       <div className='!bg-[#f7f7f7] p-[4.44444444vw] leading-[1.33] sm:p-[1.66666667vw]'>
         <p className='wrap-anywhere mb-[1.11111111vw] text-[2.77777778vw] sm:text-[.83333333vw]'>*Images shown here are for representational purpose only, actual may vary. All features, specifications and prices are subject to change without prior notice. Model availability may vary from location to location.</p>
         <p className='wrap-anywhere mb-[1.11111111vw] text-[2.77777778vw] sm:text-[.83333333vw]'>*Image simulated. Samsung account login may be required for certain AI features.</p>
