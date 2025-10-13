@@ -16,8 +16,9 @@ const AppRoutes = () => {
       <Route path="/weather" element={<Weather />} />
       <Route path="/login" element={<Login />} />
       <Route path="/loginform" element={<Loginform/>} />
-      <Route parth="/cart" element={<Cart />} />
-      <Route parth='/mobile' element={<Mobile />} />
+      {/* Fixed: changed "parth" to "path" */}
+      <Route path="/cart" element={<Cart />} />
+      <Route path='/mobile' element={<Mobile />} />
     </Routes>
   );
 };
