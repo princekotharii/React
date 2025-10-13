@@ -13,7 +13,7 @@ function App() {
   const isCart = location.pathname === '/cart'
   return (
   <UserProvider>
-    <div className={`overflow-x-hidden overflow-hidden  flex-col  `}>
+    <div className={`overflow-x-hidden flex flex-col items-center  justify-center m-auto  `}>
       {isLogin || isCart ? <LoginHeader /> : <Navbar />}
       <AppRoutes />
       <Footer />
