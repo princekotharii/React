@@ -28,7 +28,7 @@ function Home() {
 
       {/* Product Card 1st */}
 
-          <div className="flex p-[1.6666667vw_0vw] gap-[1.6666666vw] max-w-[1440px] h-[810]  ">
+          <div className="flex p-[1.6666667vw_0vw] gap-[1.6666666vw]    ">
                 <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/ux3/home/MDVD_Feature_Card1_560X560.jpg?$560_560_JPG$"
                 title={"Neo QLED 8K"} />
                 <ProductCard img="https://images.samsung.com/is/image/samsung/assets/in/ux3/home/MDVD_Feature_Card2_560X560.jpg?$560_560_JPG$"
