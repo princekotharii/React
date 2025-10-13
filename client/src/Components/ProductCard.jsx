@@ -13,15 +13,20 @@ function ProductCard(props) {
               className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-300'
             />
           </div>
-        </div>
 
-        <div className='p-6 text-center'>
-          <p className='text-base lg:text-xl font-bold leading-normal'>{props.title}</p>
-        </div>
+          {/* Title Positioned at Top Center */}
+          <div className='absolute top-4 left-1/2 -translate-x-1/2 text-center text-black  py-1 '>
+            <p className='text-base lg:text-xl font-[700] leading-normal'>
+              {props.title}
+            </p>
+          </div>
 
-        <span className='text-white bg-black absolute bottom-8 left-1/2 -translate-x-1/2 px-6 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-          Buy
-        </span>
+          {/* Buy Button */}
+          <span className='text-white bg-black absolute bottom-8 left-1/2 -translate-x-1/2 px-6 py-2 rounded-full 
+                            opacity-0 translate-y-5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out'>
+            Buy
+          </span>
+        </div>
       </Link>
     </div>
   )
