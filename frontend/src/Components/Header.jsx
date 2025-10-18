@@ -84,12 +84,12 @@ function Header() {
                 <button onClick={()=> navigate('./login')} className='group p-[8px] xl:p-[.625vw] text-0 items-center cursor-pointer'>
                     <FaRegUser className='h-[24px] xl:h-[24px] w-[24px] xl:w-[24px]'/>
 
-                    <div className='z-10 bg-white text-black absolute hidden xl:group-hover:flex right-[.44444445vw] shadow-[0_4px_10px_0_rgba(0,0,0,.2)] mt-[1.04166667vw] p-[1.66666667vw] rounded-[1.38888889vw] w-[18.33333333vw] flex-col text-start'>
-                        <Link className='font-bold p-[.69444444vw_1.11111111vw_.83333333vw_1.11111111vw] text-[.97222222vw] leading-[1.33]'>{user || "Login"}</Link>
-                        <Link className='mb-[.625vw] p-[.69444444vw_1.11111111vw_.83333333vw_1.11111111vw] text-[.97222222vw] flex items-center relative justify-between leading-[1.33]'>Why Create a Samsung Account?</Link>
-                        <Link className='p-[.69444444vw_1.11111111vw_.83333333vw_1.11111111vw] text-[.97222222vw] leading-[1.33]'>Order</Link>
-                        <Link className='p-[.69444444vw_1.11111111vw_.83333333vw_1.11111111vw] text-[.97222222vw] leading-[1.33]'>Product Registrarion</Link>
-                        <Link className='p-[.69444444vw_1.11111111vw_.83333333vw_1.11111111vw] text-[.97222222vw] leading-[1.33]'>Digital Service Center</Link>
+                    <div className='z-10 bg-white text-black absolute hidden xl:group-hover:flex right-[.44444445vw] shadow-[0_4px_10px_0_rgba(0,0,0,.2)] mt-[15px] p-[24px] rounded-[1.38888889vw] w-[264px] flex-col text-start'>
+                        <Link className='font-bold p-[10px_16px_12px_16px] text-[14px] leading-[1.33]'>{user || "Login"}</Link>
+                        <Link className='mb-[9px] p-[10px_16px_12px_16px] text-[14px] flex items-center relative justify-between leading-[1.33]'>Why Create a Samsung Account?</Link>
+                        <Link className='p-[10px_16px_12px_16px] text-[14px] leading-[1.33]'>Order</Link>
+                        <Link className='p-[10px_16px_12px_16px] text-[14px] leading-[1.33]'>Product Registrarion</Link>
+                        <Link className='p-[10px_16px_12px_16px] text-[14px] leading-[1.33]'>Digital Service Center</Link>
                     </div>
                 </button>
 

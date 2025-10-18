@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function ProductCard(props) {
   return (
-    <div className='relative group sm:w-1/4 w-[280px] cursor-pointer inline-block flex-shrink-0'>
+    <div className='relative group sm:w-1/4 w-[280px] cursor-pointer inline-block flex-shrink-0 p-[0px_12px]'>
       <Link to={props.linksrc || '/'}>
         <div className='relative w-full pb-[100%] overflow-hidden'>
           <div className='absolute top-0 left-0 w-full h-full'>
