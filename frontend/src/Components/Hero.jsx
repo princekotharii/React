@@ -7,13 +7,13 @@ function Hero() {
     <div className="relative cursor-pointer flex justify-center overflow-hidden">
       {/* Desktop Image */}
       <img className="hidden sm:block transition-all duration-300 ease-out"
-        src='https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/25_bf_hero-kv_preview_pc_1920x1080_text_.jpg?$1920_N_JPG$?imwidth=1366'
+        src='https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/Home_Hero_KV-1-v2.jpg?$1920_N_JPG$?imwidth=1366'
         alt="hero"/>
 
       {/* Mobile Image */}
       <img
         className="sm:hidden w-full transition-all duration-300 ease-out"
-        src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/25_bf-hero_kv_mo_720x1120.jpg?$720_N_JPG$?imwidth=720"
+        src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/Home_Hero_KV.jpg?$720_N_JPG$?imwidth=720"
         alt="mobile hero"
       />
         {/* Hero Images buttons */}

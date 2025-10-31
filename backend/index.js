@@ -1,18 +1,23 @@
-const express = require('express')
+import express from 'express'
+import 'dotenv/config'
+import cors from 'cors'
+import { connectDb } from './config/db.js'
+import userRouter from './routers/routes.js'
 
 const app = express()
 
+app.use(express.json())
 
-app.get('/',(req,res)=>{
-    res.send("Hello")
-})
+app.use(cors({
+    credentials: true,
+    origin: process.env.FRONTEND_URL
+}))
 
-app.get('/cart',(req,res)=>{
-    res.send("Hello cart")
-})
+app.use('/api',userRouter)
 
-const PORT = 3000
-
-app.listen(PORT,()=>{
-    console.log("server is running");  
+connectDb().
+then(()=>{
+    app.listen(process.env.PORT,()=>{
+        console.log('This is Port' , process.env.PORT );
+    })
 })

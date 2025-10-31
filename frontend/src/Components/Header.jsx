@@ -42,9 +42,9 @@ useEffect(() => {
       ${
         isNavPage
           ? isListHovered
-            ? 'bg-white text-black z-10 fixed'
+            ? 'bg-white text-black z-50 fixed'
             : isScrolledUp
-            ? 'bg-white text-black z-10 fixed'
+            ? 'bg-white text-black z-50 fixed'
             : 'bg-transparent text-black z-10 absolute'
           : 'bg-white text-black fixed'
       } transition-colors duration-300`}
@@ -88,11 +88,11 @@ useEffect(() => {
         <button
           type='button'
           className={`flex items-center xl:border xl:border-[rgba(255,255,255,0.2)] p-[9px] xl:p-[10px_12px] xl:mr-[.69444444vw] gap-[.55555556vw] xl:w-[176px] xl:rounded-[6.94444444vw]
-          ${isNavPage ? isListHovered || isScrolledUp ? "bg-[#f7f7f7] text-black" : "xl:bg-[rgba(255,255,255,0.1)] text-white" : "bg-[#f7f7f7] text-black"}
+          ${isNavPage ? isListHovered || isScrolledUp ? "bg-[#f7f7f7] text-black" : "xl:bg-[rgba(255,255,255,0.1)] text-black" : "bg-[#f7f7f7] text-black"}
           cursor-pointer relative justify-start`}
         >
           <span className='hidden xl:block order-2 absolute!important'>Search</span>
-          <GoSearch className='w-[24px] xl:w-[1.1111111vw] h-[24px] xl:h-[1.1111111vw]' />
+          <GoSearch className='w-[24px] xl:w-[1.1111111vw] h-[24px] xl:h-[1.1111111vw] ' />
         </button>
 
         {/* Cart */}
@@ -105,7 +105,7 @@ useEffect(() => {
           <FaRegUser className='h-[24px] xl:h-[24px] w-[24px] xl:w-[24px]' />
 
           <div className='z-10 bg-white text-black absolute hidden xl:group-hover:flex right-[.44444445vw] shadow-[0_4px_10px_0_rgba(0,0,0,.2)] mt-[15px] p-[24px] rounded-[1.38888889vw] w-[264px] flex-col text-start'>
-            <Link className='font-bold p-[10px_16px_12px_16px] text-[14px] leading-[1.33]'>{user || "Login"}</Link>
+            <Link className='font-bold p-[10px_16px_12px_16px] text-[14px] leading-[1.33]'>{user?.FullName || "Login"}</Link>
             <Link className='mb-[9px] p-[10px_16px_12px_16px] text-[14px] flex items-center relative justify-between leading-[1.33]'>Why Create a Samsung Account?</Link>
             <Link className='p-[10px_16px_12px_16px] text-[14px] leading-[1.33]'>Order</Link>
             <Link className='p-[10px_16px_12px_16px] text-[14px] leading-[1.33]'>Product Registration</Link>

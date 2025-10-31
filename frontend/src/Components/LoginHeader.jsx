@@ -29,10 +29,10 @@ function LoginHeader() {
                 <button className="group h-full w-[40px] text-0 items-center cursor-pointer">
                     <FaRegUser className="h-[24px] opacity-[0.5] xl:h-[1.66666667vw] w-[24px] xl:w-[1.66666667vw]" />
 
-                    <ul className="z-10 bg-white text-black absolute hidden xl:group-hover:block top-[4.44444444vw] right-[.55555556vw] shadow-[0_4px_10px_0_rgba(0,0,0,.2)] rounded-[1.38888889vw] p-[1.66666667vw_0]">
+                    <ul className="z-10 bg-white text-black absolute hidden xl:group-hover:block top-[4.44444444vw] right-[.55555556vw] shadow-[0_4px_10px_0_rgba(0,0,0,.2)] rounded-[1.38888889vw] p-[1.66666667vw_0] transition-all duration-200 ease-in-out">
                         <li className="">
-                            <Link className="p-[0_1.11111111vw] w-[15vw] text-[.97222222vw] inline-flex items-center justify-start font-[600] leading-[2.77777778vw]">
-                                {user || "Log-In/Sign-Up"}
+                            <Link to={user?'/profile':'/login'} className="p-[0_1.11111111vw] w-[15vw] text-[.97222222vw] inline-flex items-center justify-start font-[600] leading-[2.77777778vw]">
+                                {user?.FullName || "Log-In/Sign-Up"}
                             </Link>
                         </li>
                         <li className="">

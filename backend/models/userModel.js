@@ -1,10 +1,9 @@
 import mongoose from "mongoose";
 
 const userSchema = mongoose.Schema({
-    fullName: String,
-    userName: String,
-    phoneNumber: Number,
-    password: String
+    FullName: {type: String},
+    Email: {type: String, unique: true, require: true},
+    Password: {type: String, require: true}
 })
 
 export const user = mongoose.model("User", userSchema)

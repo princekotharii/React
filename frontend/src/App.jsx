@@ -1,24 +1,17 @@
-import React from "react";
-import Navbar from "./Components/Header";
-import Footer from "./Components/Footer";
-import Home from "./Pages/Home";
-import AppRoutes from "./Routes/Routes";
-import UserProvider from "./contexts/UserProvider";
-import { useLocation } from "react-router-dom";
-import LoginHeader from "./Components/LoginHeader";
+import React from 'react'
+import './App.css'
+import AppRouter from './Routes/Routes'
+import UserProvider from './contexts/UserProvider'
+import Layout from './Components/Layout'
 
 function App() {
-  const location = useLocation()
-  const isLogin = location.pathname === '/login'
-  const isCart = location.pathname === '/cart'
   return (
-  <UserProvider>
-    <div className={`overflow-x-hidden flex flex-col overflow-hidden items-center  `}>
-      {isLogin || isCart ? <LoginHeader /> : <Navbar />}
-      <AppRoutes />
-      <Footer />
-    </div>
-  </UserProvider>
-  );
+    <UserProvider>
+      <Layout>
+        <AppRouter />
+      </Layout>
+    </UserProvider>
+  )
 }
-export default App;
+
+export default App
