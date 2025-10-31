@@ -136,3 +136,20 @@ export async function Login(req, res) {
 export function Cart(req,res){
     console.log('This is cart');
 }
+
+ // Forget the password  function 
+  export async function ForgetPassword() {
+    try {
+        const {Email,Password}=req.body
+        console.log("req body for Forget Password or Email",req.body);
+        const findOne =user.findOne
+        const userId =user._id
+        console.log(userId);
+        
+        
+    } catch (error) {
+        console.log("eroor");
+        
+        
+    }
+}
