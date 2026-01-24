@@ -17,7 +17,7 @@ function Home() {
             <div className=" cursor-pointer relative">
         <img className="hidden sm:block" src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/Feature_KV-DA_v2.jpg?$1440_N_JPG$" alt="" />
         <img className="sm:hidden" src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/Feature_KV-DA-1-v2.jpg?$720_N_JPG$" alt="" />
-            <div className=" top-[40%] left-[60px] translateY(-50%) absolute z-10 w-[620px] mt-[-4px]">
+            <div className=" top-[40%] left-[60px] translateY(-50%) absolute z-10 w-[620px] -mt-1">
                     <h1 className=" text-white font-bold text-[56px] leading-[1.2]">Fab 4K AI upscaling</h1>
                     <p className=" text-white text-[24px] mt-[17px] leading-[1.33]">Grab the Frame TV</p>
                     <div className="flex items-center mt-[23px] gap-6">
@@ -46,7 +46,7 @@ function Home() {
       <div className="relative cursor-pointer ">
             <img className=" hidden sm:block w-full" src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/Feature-KV-VD_v2.jpg?$1440_N_JPG$" alt="" />
             <img className="sm:hidden" src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/Feature_KV-VD_-1-v2.jpg?$720_N_JPG$" alt="" />
-              <div className="absolute z-10 top-[35%] left-[60px] translateY(-50%) w-[620px] mt-[-4px] ">
+              <div className="absolute z-10 top-[35%] left-[60px] translateY(-50%) w-[620px] -mt-1 ">
                   <h1 className=" text-white font-bold text-[56px] leading-[1.2]">Fab AI companion</h1>
                   <p className=" text-white mt-[17px] text-[24px] leading[1.33]">
                     <br />
@@ -74,7 +74,7 @@ function Home() {
       <div className="relative">
               <img className="w-full h-full sm:block hidden" src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/Feature_KV_MX_copy.jpg?$1440_N_JPG$" alt="" />
               <img className="sm:hidden block" src="https://images.samsung.com/is/image/samsung/assets/in/home/10-2025/Feature_KV_MX_copy-1.jpg?$720_N_JPG$" alt="" />
-              <div className=" absolute z-10 top-[39%] left-[80px] translateY(-50%) w-[620px] mt-[-4px]">
+              <div className=" absolute z-10 top-[39%] left-20 translateY(-50%) w-[620px] -mt-1">
                     <h1 className=" text-white font-bold text-[56px] leading-[1.2]">Fab one-stop laundry</h1>
                     <p className="text-white  mt-[17px] text-[24px] leading-[1.33]">Grab Bespoke AI Laundry Combo</p>
                     <div className="mt-[23px] flex items-center">
